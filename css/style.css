@@ -1,6 +1,11 @@
 html,
 body {
-  height: 100%;
+        width:80%;
+        margin-left:auto;
+        margin-right:auto;
+}
+textarea {
+    resize: none;
 }
 
 .grid {
@@ -91,6 +96,9 @@ text-align: center;
     line-height: 43px;
     text-align: center;
 }
+.days-middle-container {
+  position: relative;  
+}
 
 .days-middle-date{
     height: 100%;
@@ -101,10 +109,13 @@ text-align: center;
     text-align: center;
 }
 
+
+
+
 .days-middle-bottom{
     display: grid;
     margin: 0 auto;
-    grid-template-columns: repeat(4, 128px 1fr)
+    grid-template-columns: repeat(4, 80px 60px);
 }
 
 .arrow{
@@ -136,13 +147,65 @@ text-align: center;
 }
 
 .medical{
-    background-color: blue;
+    border: 1px solid #BFC4CD;
+    border-radius: 20px;
+    background-color: #5e35b1;
+    text-transform: uppercase;
+    padding: 5px;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-family: "Lucida Grande";
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 14px;
+    
 }
 .meeting{
-    background-color: orange;
+   
+    border: 1px solid #BFC4CD;
+    border-radius: 20px;
+    background-color:#26a69a;
+    text-transform: uppercase;
+    padding: 5px;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-family: "Lucida Grande";
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 14px;
 }
 .personal{
-    background-color: green;
+    border: 1px solid #BFC4CD;
+    border-radius: 8px;
+    background-color: #81c784;
+    text-transform: uppercase;
+    padding: 5px;
+    border-radius: 20px;
+    color: #FFFFFF;
+    font-family: "Lucida Grande";
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 14px;
+}
+
+a, a:hover, a:active, a:visited, a:focus {
+    text-decoration:none;
+    color: white;
+}
+select, input, button{
+    cursor: pointer;
+    border: 1px solid #BFC4CD;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    text-transform: uppercase;
+    padding: 5px;
+    -moz-appearance: none;
+    border-radius: 20px;
+    color: #242E42;
+    font-family: "Lucida Grande";
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 14px;
 }
 
 .eventContainer {
@@ -166,9 +229,10 @@ text-align: center;
 
 .selected {
    box-sizing: border-box;	
-   height: 23px;
+   height: 25px;
+   width: 25px;
    border-radius: 10px 10px 10px 10px;
-   position: relative;
+   position: absolute;
    border: 1px solid #8CC5E0;	
    background-color: #8CC5E0;
 }
@@ -187,6 +251,7 @@ text-align: center;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
+    
   }
   
   .modal-window:target {
@@ -197,10 +262,13 @@ text-align: center;
   .modal-window>div {
     width: 600px;
     position: relative;
-    margin: 15% 15% auto;
-    padding: 2rem;
+    margin: 25% 35%;
+    padding: 1rem;
     background: #fff;
-    border: 1px solid #979797;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px;
+    border: 0px;
+    font-family: "Lucida Grande";
   }
   
   .modal-window header {

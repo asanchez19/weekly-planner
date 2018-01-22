@@ -23,7 +23,7 @@ function weekManager(model) {
             DOM.days.forEach((day, index) => {
                 day.innerHTML = elem.days[index].day;
                 if (elem.days[index].active === true) {
-
+                    // DOM.currentWeek.value = elem.days[index].date.getTime();
                     day.setAttribute("class", "selected days-middle-date ");
                     DOM.notes.value = elem.days[index].notes;
                     elem.days[index].dailyPlan.map((element, index) => {
@@ -60,8 +60,11 @@ function weekManager(model) {
     };
 }
 const setIndexTodelete = (index) => {
-    let deleted = document.getElementById("deleted");
-    deleted.value = index;
-    deleted.click();
+    if (confirm('Are you sure you want to remove this event?')) {
+        let deleted = document.getElementById("deleted");
+        deleted.value = index;
+        deleted.click();
+    }
+
 
 }

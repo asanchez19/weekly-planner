@@ -22,10 +22,11 @@ function week() {
                 currentMonth: monthNames[monthIndex],
                 days: []
             });
+            let active = true;
             for (let i = 0; i < 7; i++) {
                 let currentDay = day + i;
                 weekDays[0].days.push({
-                    active: false,
+                    active: active,
                     day: currentDay,
                     date: new Date(`${monthIndex + 1}-${currentDay}-${year}`),
                     notes: '',
@@ -34,7 +35,7 @@ function week() {
                     complete: false,
 
                 });
-
+                active = false;
             }
 
             subject.notifyObservers();
