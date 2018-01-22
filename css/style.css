@@ -1,0 +1,235 @@
+html,
+body {
+  height: 100%;
+}
+
+.grid {
+    display: grid;
+    width: 960px;
+    height: 100%;
+    grid-template: 100% / 100px 100%;
+  }
+  
+.box {
+border: 1px solid #979797;
+text-align: center;
+}
+
+.left-navbar {
+    background-color: #027EA7;
+}
+.left-grid{
+  display: inline-block;
+  margin:25px auto 0 auto;
+}
+
+.left-box-top{
+    margin: 0 25px 25px 25px;
+    height: 49px;	
+    width: 51px;	
+    color: #FFFFFF;	
+    font-size: 50px;	
+    text-align: center;
+}
+.left-box-middle{
+    height: 50px;
+    color: #FFFFFF;	
+    font-family: "Lucida Grande";	
+    font-size: 30px;	
+    line-height: 35px;	
+    text-align: center;
+}
+.left-box-bottom{
+    height: 50px;	
+    color: #FFFFFF;	
+    font-size: 50px;	
+    line-height: 49px;	
+    text-align: center;
+}
+
+.calendar-container{
+    margin: 5% auto;
+    /* position: relative; */
+    border-radius: 10px 10px 0 0;
+    width: 90%;
+    height: 80%;
+}
+
+.days {	
+    height: 100px;	
+    width: auto;		
+    border-radius: 10px 10px 0 0;	
+    background-color: #0086B2;	
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+    display: grid;
+    /* grid-template-rows: 30px 1fr; */
+    grid-template: 1fr / 100px 1fr 100px;
+}
+.days-left{
+    margin: 25px 0 0 0;
+}
+.days-middle{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
+}
+
+.days-right{
+    margin: 25px 0 0 0; 
+}
+.days-middle-top{
+    display: grid;
+    margin: 10px auto;
+    grid-template-columns: repeat(4, 125px 1fr)
+}
+
+.days-middle-each{
+    height: 100%;
+    color: #FFFFFF;	
+    font-family: "Lucida Grande";	
+    font-size: 32px;	
+    line-height: 43px;
+    text-align: center;
+}
+
+.days-middle-date{
+    height: 100%;
+    color: #FFFFFF;	
+    font-family: "Lucida Grande";	
+    font-size: 20px;	
+    line-height: 0px;
+    text-align: center;
+}
+
+.days-middle-bottom{
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 128px 1fr)
+}
+
+.arrow{
+    height: 49px;	
+    width: 36.49px;
+    color: #FFFFFF;	
+    font-size: 50px;	
+    text-align: center;
+}
+.content-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    
+}
+.content-left{
+    border: 1px solid #979797;	
+}
+
+.content-rigth{
+    border: 1px solid #979797;	
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.content-rigth-top{
+}
+.content-rigth-bottom{
+}
+
+.medical{
+    background-color: blue;
+}
+.meeting{
+    background-color: orange;
+}
+.personal{
+    background-color: green;
+}
+
+.eventContainer {
+    display: grid;
+    grid-rows: 50px 5em auto;  
+}
+.header-right{
+    height: 50px;
+    width: 100%;	
+    border: 1px solid #4F9ECD;	
+    background-color: #4F9ECD;
+}
+
+.header-text{
+    color: #FFFFFF;	
+    font-family: "Lucida Grande";	
+    font-size: 24px;	
+    line-height: 28px;	
+    text-align: center;
+}
+
+.selected {
+   box-sizing: border-box;	
+   height: 23px;
+   border-radius: 10px 10px 10px 10px;
+   position: relative;
+   border: 1px solid #8CC5E0;	
+   background-color: #8CC5E0;
+}
+
+/*********** Modal ************/
+.modal-window {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.15);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  
+  .modal-window:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .modal-window>div {
+    width: 600px;
+    position: relative;
+    margin: 15% 15% auto;
+    padding: 2rem;
+    background: #fff;
+    border: 1px solid #979797;
+  }
+  
+  .modal-window header {
+    font-weight: bold;
+  }
+  
+  .modal-close {
+    color: #aaa;
+    line-height: 50px;
+    font-size: 80%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 70px;
+    text-decoration: none;
+  }
+  
+  .modal-close:hover {
+    color: #000;
+  }
+  
+  .modal-window h1 {
+    font-size: 150%;
+    margin: 0 0 15px;
+  }
+  
+  .form {
+    display: grid;
+    grid-template: 35px 35px 35px /auto ;
+    margin: 5%;
+  }

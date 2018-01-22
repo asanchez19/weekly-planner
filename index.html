@@ -1,0 +1,151 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weekly Planner</title>
+    <link rel='stylesheet' type='text/css' href='./css/style.css'>
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+</head>
+
+<body id="body">
+
+    <div class="grid">
+        <div class="box left-navbar">
+            <div class="left-grid">
+                <div class="left-box-top">
+                    <span class="calendar lnr lnr-calendar-full"></span>
+                </div>
+                <div class="left-box-middle">
+                    <p id="month"></p>
+                </div>
+                <div class="left-box-bottom">
+                    <a class="calendar lnr lnr-plus-circle " href="#open-modal"></a>
+                </div>
+            </div>
+
+        </div>
+        <div class="box ">
+            <div class="calendar-container">
+                <div class="days">
+                    <div class="days-left">
+                        <a class="arrow lnr lnr-chevron-left" id="back"></a>
+                    </div>
+                    <div class="days-middle">
+                        <div class="days-middle-top">
+                            <div class="days-middle-each">S</div>
+                            <div class="days-middle-each">M</div>
+                            <div class="days-middle-each">T</div>
+                            <div class="days-middle-each">W</div>
+                            <div class="days-middle-each">T</div>
+                            <div class="days-middle-each">F</div>
+                            <div class="days-middle-each">S</div>
+                        </div>
+                        <div class="days-middle-bottom">
+                            <div>
+                                <p name="week-day" id="sunday"></p>
+                            </div>
+                            <div>
+                                <p name="week-day" id="monday"></p>
+                            </div>
+                            <div>
+                                <p name="week-day" id="tuesday"></p>
+                            </div>
+                            <div>
+                                <p name="week-day" id="wednesday"></p>
+                            </div>
+                            <div>
+                                <p name="week-day" id="thursday"></p>
+                            </div>
+                            <div>
+                                <p name="week-day" id="friday"></p>
+                            </div>
+                            <div>
+                                <p name="week-day" id="saturday"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="days-right">
+                        <a class="arrow lnr lnr-chevron-right" id="next"></a>
+                    </div>
+                </div>
+                <div class="content-container">
+                    <div class="content-left">
+                        <div class="header-right">
+                            <p class="header-text">Daily Plan</p>
+                            <input id="deleted" type="hidden" value="">
+                            <div id="eventContainer" class="eventContainer">
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="content-rigth">
+                        <div class="content-rigth-top">
+                            <div class="header-right">
+                                <p class="header-text">Notes</p>
+                                <textarea id="notes" rows="4" cols="50"></textarea>
+                            </div>
+                        </div>
+                        <div class="content-rigth-bottom">
+                            <div class="header-right">
+                                <p class="header-text">To Do</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="open-modal" class="modal-window">
+        <div>
+            <a href="#modal-close" title="Close" class="modal-close">Close</a>
+            <h1>Daily Plan</h1>
+            <div class="form">
+                <div>
+                    <label for="Event">Event: </label>
+                    <input type="text" name="event" id="event" required>
+                </div>
+                <div>
+                    <label for="time">Time </label>
+                    <select name="time" id="time">
+                        <option value="7">7:00</option>
+                        <option value="8">8:00</option>
+                        <option value="9">9:00</option>
+                        <option value="10">10:00</option>
+                        <option value="11">11:00</option>
+                        <option value="12">12:00</option>
+                        <option value="13">13:00</option>
+                        <option value="14">14:00</option>
+                        <option value="15">15:00</option>
+                        <option value="16">16:00</option>
+                        <option value="17">17:00</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="category">Category</label>
+                    <select name="category" id="category">
+                        <option value="medical">Medical appointment</option>
+                        <option value="meeting">Meeting</option>
+                        <option value="personal">Personal</option>
+                    </select>
+
+                </div>
+                <div>
+                    <button id="save">Submit</button>
+                </div>
+            </div>
+        </div>
+
+</body>
+<footer>
+</footer>
+<script src="./js/model/observer.js"></script>
+<script src="./js/view/weekManager.js"></script>
+<script src="./js/model/week.js"></script>
+<script src="./js/controller/weekController.js"></script>
+<script src="./js/weeklyInit.js"></script>
+
+</html>
